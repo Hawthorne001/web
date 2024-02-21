@@ -19,7 +19,7 @@
     "@coinbase/cookie-banner": "^1.0.3",
     "@coinbase/cookie-manager": "^1.1.1",
     "@docusaurus/core": "2.4.1",
-    "@docusaurus/preset-classic": "2.4.1",
+    "@docusaurus/preset-classic": "2.4.3",
     "@mdx-js/react": "^1.6.22",
     "@rainbow-me/rainbowkit": "^1.0.4",
     "docusaurus-node-polyfills": "^1.0.0",
@@ -38,7 +38,7 @@
     "@docusaurus/logger": "2.3.1",
     "@docusaurus/module-type-aliases": "2.3.1",
     "@docusaurus/plugin-content-docs": "2.3.1",
-    "@docusaurus/preset-classic": "2.3.1",
+    "@docusaurus/preset-classic": "2.4.3",
     "@docusaurus/theme-common": "2.3.1",
     "@tsconfig/docusaurus": "^1.0.5"
   },
