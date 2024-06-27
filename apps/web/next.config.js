@@ -77,6 +77,7 @@ const contentSecurityPolicy = {
     greenhouseDomains,
     ccaLiteDomains,
     ccaDomain,
+    'wss://www.walletlink.org/rpc', // coinbase wallet connection
     'https://analytics-service-dev.cbhq.net',
     'mainnet.base.org',
     'https://cloudflare-eth.com',
@@ -174,6 +175,16 @@ module.exports = extendBaseConfig({
         // just so the build doesn't fail in CI
         destination: process.env.NEXT_PUBLIC_OCS_CREATIVE_DOWNLOAD_URL ?? '/',
         permanent: false,
+      },
+      {
+        source: '/registry',
+        destination: 'https://buildonbase.deform.cc/registry/',
+        permanent: true,
+      },
+      {
+        source: '/registry-edit',
+        destination: 'https://buildonbase.deform.cc/registry-edit/',
+        permanent: true,
       },
     ];
   },

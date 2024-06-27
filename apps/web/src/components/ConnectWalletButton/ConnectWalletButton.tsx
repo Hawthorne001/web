@@ -1,30 +1,69 @@
-import { Button } from 'apps/web/src/components/Button/Button';
+import { useCallback, useEffect } from 'react';
+import { useAccount } from 'wagmi';
+import { ConnectButton, useConnectModal } from '@rainbow-me/rainbowkit';
 
-import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { UserAvatar } from 'apps/web/src/components/ConnectWalletButton/UserAvatar';
+import { ShinyButton } from 'apps/web/src/components/ShinyButton/ShinyButton';
+import logEvent, {
+  ActionType,
+  AnalyticsEventImportance,
+  ComponentType,
+  identify,
+} from 'base-ui/utils/logEvent';
 
 type ConnectWalletButtonProps = {
   color: 'white' | 'black';
   className: string;
 };
 
-const colorVariant: Record<'white' | 'black', 'secondaryBounce' | 'secondaryDarkBounce'> = {
-  white: 'secondaryBounce',
-  black: 'secondaryDarkBounce',
+const colorVariant: Record<'white' | 'black', 'white' | 'black'> = {
+  white: 'white',
+  black: 'black',
 };
 
 export function ConnectWalletButton({ color, className }: ConnectWalletButtonProps) {
+  const { openConnectModal } = useConnectModal();
+  const { address } = useAccount();
+
+  useEffect(() => {
+    if (address) {
+      logEvent(
+        'wallet_connected',
+         {
+          action: ActionType.change,
+          context: 'navbar',
+          address
+         },
+         AnalyticsEventImportance.low
+        );
+      identify({ userId: address });
+    }
+  }, [address]);
+
+  const clickConnect = useCallback(() => {
+    openConnectModal?.();
+    logEvent(
+      'connect_wallet',
+      {
+        action: ActionType.click,
+        componentType: ComponentType.button,
+        context: 'navbar'
+      },
+      AnalyticsEventImportance.low
+    );
+  }, [openConnectModal]);
+
   return (
     <ConnectButton.Custom>
-      {({ account, chain, openAccountModal, openChainModal, openConnectModal, mounted }) => {
+      {({ account, chain, openAccountModal, openChainModal, mounted }) => {
         const ready = mounted;
         const connected = ready && account && chain;
 
         if (!connected) {
           return (
-            <Button variant={colorVariant[color]} onClick={openConnectModal}>
+            <ShinyButton variant={colorVariant[color]} onClick={clickConnect}>
               Connect
-            </Button>
+            </ShinyButton>
           );
         }
 
