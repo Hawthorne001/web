@@ -62,6 +62,17 @@ hide_table_of_contents: true
 
 ---
 
+## All That Node
+
+[All That Node](https://www.allthatnode.com/base.dsrv) is a comprehensive multi-chain development suite, designed to support multiple networks from a single platform. They offer free and [paid plans](https://www.allthatnode.com/pricing.dsrv) with additional features and increased request limits.
+
+#### Supported Networks
+
+- Base Mainnet
+- Base Sepolia (Testnet)
+
+---
+
 ## Ankr
 
 [Ankr](https://www.ankr.com/rpc/base/) provides private and public RPC endpoints for Base, powered by a globally distributed and decentralized network of nodes. They offer free and [paid plans](https://www.ankr.com/rpc/pricing/) with increased request limits.
@@ -192,6 +203,15 @@ hide_table_of_contents: true
 
 ---
 
+## RockX
+[RockX](https://access.rockx.com) offers a global blockchain node network and developer tools for onchain innovation. Start with our free [Base RPC](https://access.rockx.com/product/base-blockchain-api-for-web3-builders) to access institutional-grade solutions.
+
+#### Supported Networks
+
+- Base Mainnet
+
+---
+
 ## Stackup
 
 [Stackup](https://www.stackup.sh/) is a leading ERC-4337 infrastructure platform. You can access hosted Base nodes with built-in [account abstraction tools](https://docs.stackup.sh/docs) like bundlers and paymasters.
@@ -226,7 +246,17 @@ hide_table_of_contents: true
 
 ## Unifra
 
-[Unifra](https://base.unifra.io/) is a Web3 developer platform that provides tools, APIs, and node infrastructure, and provides access to Base nodes that are nodes are reliabile, scalable, and easy to use.
+[Unifra](https://base.unifra.io/) is a Web3 developer platform that provides tools, APIs, and node infrastructure, and provides access to Base nodes that are nodes are reliable, scalable, and easy to use.
+
+#### Supported Networks
+
+- Base Mainnet
+
+---
+
+## Validation Cloud
+
+[Validation Cloud](https://app.validationcloud.io/) is the world’s fastest node provider according to Compare Nodes. With 50 million compute units available for use without a credit card and a scale tier that never has rate limits, Validation Cloud is built to support your most rigorous and low-latency workloads.
 
 #### Supported Networks
 
