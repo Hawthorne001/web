@@ -45,7 +45,7 @@
     "@react-three/drei": "^9.113.0",
     "@react-three/fiber": "^9.0.0-alpha.8",
     "@react-three/postprocessing": "^3.0.0-rc.0",
-    "@react-three/rapier": "1.1.1",
+    "@react-three/rapier": "1.5.0",
     "@tanstack/react-query": "^5",
     "@types/jsdom": "^21.1.7",
     "@types/jsonwebtoken": "^9.0.6",
